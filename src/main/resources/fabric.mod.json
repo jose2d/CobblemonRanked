@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "cobblemonranked",
+  "version": "1.0.0",
+  "name": "CobblemonRanked",
+  "description": "A mod for ranked Cobblemon battles",
+  "authors": ["Your Name"],
+  "contact": {
+    "repo": "https://github.com/jlpit/CobblemonRanked"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/cobblemonranked/icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "jse.planetacorp.cobblemonranked.CobblemonRanked"
+    ]
+  },
+  "mixins": [
+    "cobblemonranked.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.20.1"
+  }
+}
