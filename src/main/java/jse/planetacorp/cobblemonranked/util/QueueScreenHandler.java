@@ -8,6 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.ScreenHandlerType;
+import net.minecraft.screen.SimpleNamedScreenHandlerFactory;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.screen.slot.SlotActionType;
 import net.minecraft.text.Text;
@@ -99,10 +100,12 @@ public class QueueScreenHandler extends ScreenHandler {
 
     @Override
     public void onSlotClick(int slotId, int button, SlotActionType actionType, PlayerEntity player) {
-        // Se necessário, podemos adicionar lógica para os botões aqui
-        if (actionType != SlotActionType.PICKUP || slotId < 0 || slotId >= inventory.size()) {
-            return;
+        if (slotId == 20) {  // Slot do botao Casual
+            player.openHandledScreen(new SimpleNamedScreenHandlerFactory((syncId, playerInventory, playerEntity) -> {
+                return new CasualScreenHandler(syncId, playerInventory);
+            }, Text.literal("Casual")));
+        } else {
+            super.onSlotClick(slotId, button, actionType, player);
         }
-        super.onSlotClick(slotId, button, actionType, player);
     }
 }

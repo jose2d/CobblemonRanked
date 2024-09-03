@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "name": "CobblemonRanked",
   "description": "A mod for ranked Cobblemon battles",
-  "authors": ["Your Name"],
+  "authors": ["topper"],
   "contact": {
-    "repo": "https://github.com/jlpit/CobblemonRanked"
+    "repo": "https://github.com/jose2d/CobblemonRanked"
   },
   "license": "All-Rights-Reserved",
   "icon": "assets/cobblemonranked/icon.png",
